@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://camnexo.com/sitemap.xml
+Sitemap: https://camnexo.yantrixlab.com/sitemap.xml
