@@ -3,7 +3,7 @@
 //   status: "early" shows an Early access badge, "soon" shows Coming soon
 //   note:   small line under the button
 window.CAMNEXO = {
-  contactEmail: "hello@camnexo.com",
+  contactEmail: "yantrixlab@gmail.com",
   version: "",
   downloads: {
     windows: { status: "early", url: "", note: "Windows 11. Early-access builds are not code-signed yet." },
