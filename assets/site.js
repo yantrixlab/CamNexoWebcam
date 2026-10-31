@@ -66,14 +66,27 @@
     var ready = !!info.url;
     var badge = el.querySelector(".badge");
     if (badge) {
-      badge.textContent = ready ? "Available" : info.status === "early" ? "Early access" : "Coming soon";
+      badge.textContent = info.status === "early" ? "Early access" : ready ? "Available" : "Coming soon";
       badge.className = "badge " + (ready || info.status === "early" ? "early" : "soon");
     }
     var fine = el.querySelector(".fine");
-    if (fine) fine.textContent = info.note || "";
+    if (fine) {
+      fine.textContent = info.note || "";
+      if (ready && info.sha256) {
+        var h = d.createElement("span");
+        h.className = "hash";
+        h.textContent = "SHA-256: " + info.sha256;
+        fine.appendChild(h);
+      }
+    }
     var a = el.querySelector("a.btn");
     if (a) {
-      if (ready) { a.href = info.url; a.removeAttribute("aria-disabled"); a.textContent = "Download"; }
+      if (ready) {
+        a.href = info.url;
+        a.setAttribute("download", "");
+        a.removeAttribute("aria-disabled");
+        a.textContent = "Download" + (info.size ? " (" + info.size + ")" : "");
+      }
       else {
         a.href = "mailto:" + cfg.contactEmail + "?subject=" + encodeURIComponent("CamNexo early access: " + names[key]);
         a.textContent = info.status === "early" ? "Ask for early access" : "Notify me";

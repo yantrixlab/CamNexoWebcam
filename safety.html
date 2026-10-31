@@ -71,7 +71,7 @@
 <h2 id="windows">The Windows virtual camera</h2>
 
 <p>On Windows 11 the desktop app adds a camera called “CamNexo” by registering a small component with the system. That step needs administrator permission once. Because it runs inside Windows' camera service, you may occasionally see that service restart; this is normal behaviour when a camera component is replaced or stops.</p>
-<p>To remove the virtual camera, close CamNexo, open PowerShell as administrator in the CamNexo folder and run <code>camnexo_vcam.exe unregister</code>. Then uninstall the apps as usual.</p>
+<p>The Windows installer also adds a firewall rule that lets phones reach CamNexo on <strong>private</strong> networks only. To remove everything, uninstall CamNexo from Windows Settings, Apps. The uninstaller removes the virtual camera, its files and the firewall rule.</p>
 
 <h2 id="phone">Heat, battery and background use</h2>
 
