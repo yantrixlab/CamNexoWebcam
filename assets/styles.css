@@ -59,6 +59,7 @@ h1, h2, h3 { margin: 0; line-height: 1.12; letter-spacing: -0.025em; }
   display: grid; place-items: center;
   box-shadow: 0 6px 22px -4px rgba(59, 130, 246, 0.6);
 }
+.logo-img { width: 36px; height: 36px; flex: none; filter: drop-shadow(0 6px 14px rgba(59, 130, 246, 0.45)); }
 .logo svg { width: 19px; height: 19px; }
 .links { display: flex; align-items: center; gap: 6px; }
 .links a { padding: 8px 14px; border-radius: 999px; color: var(--dim); font-size: 0.95rem; transition: color 0.2s, background 0.2s; }
