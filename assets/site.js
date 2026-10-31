@@ -73,10 +73,17 @@
     if (fine) {
       fine.textContent = info.note || "";
       if (ready && info.sha256) {
+        // The checksum is for people who want to verify the file; keep it folded away.
+        var det = d.createElement("details");
+        det.className = "verify";
+        var sum = d.createElement("summary");
+        sum.textContent = "Verify download";
         var h = d.createElement("span");
         h.className = "hash";
         h.textContent = "SHA-256: " + info.sha256;
-        fine.appendChild(h);
+        det.appendChild(sum);
+        det.appendChild(h);
+        fine.appendChild(det);
       }
     }
     var a = el.querySelector("a.btn");
