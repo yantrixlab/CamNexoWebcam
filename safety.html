@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Safety and advisories | CamNexo</title>
+<meta name="description" content="Important notes before you use CamNexo: network safety, consent, early-access builds, the Windows virtual camera and known limitations.">
+<meta name="theme-color" content="#07090f">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://camnexo.com/safety.html">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav scrolled">
+  <div class="wrap nav-in">
+    <a class="brand" href="./" aria-label="CamNexo home"><span class="logo"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M3 8a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v2l4.4-2.6c.9-.5 1.6 0 1.6 1v9.2c0 1-.7 1.5-1.6 1L16 14v2a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3z"/></svg></span>CamNexo</a>
+    <nav class="links" aria-label="Main">
+      <a href="./#features">Features</a>
+      <a href="./#how">How it works</a>
+      <a href="support.html">Support</a>
+      <a href="safety.html">Safety</a>
+      <a class="btn small primary" href="./#download">Get CamNexo</a>
+    </nav>
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+</header>
+<main id="main">
+  <section class="doc-hero" style="padding-bottom:10px">
+    <div class="glow a" style="opacity:.18"></div><div class="glow b" style="opacity:.16"></div>
+    <div class="wrap">
+      <h1 class="rv">Safety and advisories</h1>
+      <p class="rv" style="--d:80ms">A short, honest list of things worth knowing before you use CamNexo, including what is not finished yet.</p>
+      <div class="meta rv" style="--d:140ms">Last updated: 31 October 2026</div>
+    </div>
+  </section>
+  <div class="wrap doc" style="padding-top:34px">
+    <aside class="toc" aria-label="On this page">
+        <a href="#network">Use trusted networks only</a>
+        <a href="#consent">Consent and the law</a>
+        <a href="#early">Early-access builds</a>
+        <a href="#windows">The Windows virtual camera</a>
+        <a href="#phone">Heat, battery and background use</a>
+        <a href="#limits">Known limitations</a>
+        <a href="#report">Report a problem or a security issue</a>
+    </aside>
+    <article class="prose">
+<h2 id="network">Use trusted networks only</h2>
+
+<div class="callout"><p><strong>The connection is not encrypted yet.</strong> The video travels in the clear between your phone and your computer, and the computer accepts a connection from any device on the network that reaches it. Treat CamNexo like a camera on your local network.</p></div>
+<ul>
+<li>Use it on your home or office Wi-Fi, or a hotspot you control.</li>
+<li>Avoid public, hotel, café, school and other shared networks.</li>
+<li>Close the desktop app when you are not using it. It stops listening for phones.</li>
+<li>On a firewall prompt, allow CamNexo on <strong>private</strong> networks only.</li>
+</ul>
+<p>Pairing and encryption are the next security work planned. This page will say when they ship.</p>
+
+<h2 id="consent">Consent and the law</h2>
+
+<p>Streaming a camera can capture other people. Tell people when they may be on camera, do not point it at places where people expect privacy, and follow the laws and workplace rules where you are. While CamNexo is streaming, the phone shows a notification and the system's camera indicator.</p>
+
+<h2 id="early">Early-access builds</h2>
+
+<ul>
+<li><strong>Not code-signed yet.</strong> Windows may show a SmartScreen or “unknown publisher” warning. Only install builds that you downloaded from this website or received directly from us, and check the address in your browser first.</li>
+<li>Expect rough edges. Please report them.</li>
+<li>CamNexo is not affiliated with Zoom, Google, Microsoft or OBS, and an update to those apps or to your operating system can affect it.</li>
+</ul>
+
+<h2 id="windows">The Windows virtual camera</h2>
+
+<p>On Windows 11 the desktop app adds a camera called “CamNexo” by registering a small component with the system. That step needs administrator permission once. Because it runs inside Windows' camera service, you may occasionally see that service restart; this is normal behaviour when a camera component is replaced or stops.</p>
+<p>To remove the virtual camera, close CamNexo, open PowerShell as administrator in the CamNexo folder and run <code>camnexo_vcam.exe unregister</code>. Then uninstall the apps as usual.</p>
+
+<h2 id="phone">Heat, battery and background use</h2>
+
+<ul>
+<li>High resolutions (1440p and 4K) make the phone work harder. If it gets hot, choose a lower size or Auto, and keep it out of direct sun.</li>
+<li>Streaming for a long time drains the battery. Plug in for long sessions.</li>
+<li>CamNexo keeps streaming when you switch apps and shows a notification with a Stop button. Some phone makers stop background apps aggressively; if that happens, exclude CamNexo from battery optimisation in your phone's settings.</li>
+</ul>
+
+<h2 id="limits">Known limitations</h2>
+
+<table class="tbl">
+<tr><th>Area</th><th>Today</th></tr>
+<tr><td>Computers</td><td>Windows 11 only. macOS and Linux are in development.</td></tr>
+<tr><td>Phones</td><td>Android only. iPhone is planned.</td></tr>
+<tr><td>Security</td><td>No pairing and no encryption yet.</td></tr>
+<tr><td>Audio</td><td>Video only. Use your computer's or a headset's microphone.</td></tr>
+<tr><td>Networks</td><td>Phone and computer must reach each other. Guest Wi-Fi and “client isolation” settings on a router can block that.</td></tr>
+<tr><td>Quality</td><td>The available sizes depend on your phone. Wi-Fi quality affects smoothness, especially at 4K.</td></tr>
+</table>
+
+<h2 id="report">Report a problem or a security issue</h2>
+
+<p>Email <a href="#" data-mail></a>. For a security problem, please put “Security” in the subject, describe what you found and how to reproduce it, and give us a reasonable time to fix it before you share details publicly. We will acknowledge your message and keep you updated.</p>
+    </article>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><a class="brand" href="./"><span class="logo"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M3 8a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v2l4.4-2.6c.9-.5 1.6 0 1.6 1v9.2c0 1-.7 1.5-1.6 1L16 14v2a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3z"/></svg></span>CamNexo</a><p>Turn your phone into a high-quality webcam. Made by Yantrix Labs.</p></div>
+      <div><h4>Product</h4><ul><li><a href="./#features">Features</a></li><li><a href="./#how">How it works</a></li><li><a href="./#download">Download</a></li><li><a href="./#faq">FAQ</a></li></ul></div>
+      <div><h4>Help</h4><ul><li><a href="support.html">Support</a></li><li><a href="safety.html">Safety and advisories</a></li><li><a href="#" data-mail>Contact</a></li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="privacy.html">Privacy policy</a></li><li><a href="terms.html">Terms of use</a></li></ul></div>
+    </div>
+    <div class="legal"><span>© <span class="year">2026</span> Yantrix Labs. All rights reserved.</span><span>CamNexo is not affiliated with Zoom, Google, Microsoft or OBS. Product names belong to their owners.</span></div>
+  </div>
+</footer>
+<script src="assets/config.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>
