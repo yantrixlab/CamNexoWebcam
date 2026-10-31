@@ -4,9 +4,9 @@
 //   note:   small line under the button
 window.CAMNEXO = {
   contactEmail: "yantrixlab@gmail.com",
-  version: "0.1.2",
+  version: "0.2.1",
   downloads: {
-    windows: { status: "early", url: "downloads/CamNexo-Setup-0.1.2.exe", sha256: "2b36e5f564f102633c2b7ae6ec061dd4dfa2c199bcae8856da462f3042ebfcbf", size: "10.7 MB", note: "Version 0.1.2 for Windows 11. Early-access build: not code-signed yet, so Windows may show an unknown-publisher warning." },
+    windows: { status: "early", url: "downloads/CamNexo-Setup-0.2.1.exe", sha256: "8ea6d314c41be08c07fb9725b486c78dee8c8e8cf57882a3f2f10fbbdac494c8", size: "10.8 MB", note: "Version 0.2.1 for Windows 11. Early-access build: not code-signed yet, so Windows may show an unknown-publisher warning." },
     macos:   { status: "soon",  url: "", note: "In development." },
     linux:   { status: "soon",  url: "", note: "In development: .deb, .rpm and AppImage." },
     android: { status: "early", url: "", note: "Android 7 or newer. Play Store listing is not live yet." },
