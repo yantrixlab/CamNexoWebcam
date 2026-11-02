@@ -88,7 +88,15 @@
     }
     var a = el.querySelector("a.btn");
     if (a) {
-      if (ready) {
+      if (ready && info.store) {
+        // A store page: opens in a new tab, no file is downloaded from here.
+        a.href = info.url;
+        a.target = "_blank";
+        a.rel = "noopener";
+        a.removeAttribute("aria-disabled");
+        a.textContent = "Get it on Google Play";
+      }
+      else if (ready) {
         a.href = info.url;
         a.setAttribute("download", "");
         a.removeAttribute("aria-disabled");
@@ -103,7 +111,8 @@
   });
   var hero = d.querySelector("[data-hero-dl]");
   if (hero) {
-    var label = names[mine] && (cfg.downloads[mine] || {}).url ? "Download for " + names[mine] : "Get CamNexo";
+    var mineInfo = cfg.downloads[mine] || {};
+    var label = names[mine] && mineInfo.url ? (mineInfo.store ? "Get it on Google Play" : "Download for " + names[mine]) : "Get CamNexo";
     var t = hero.querySelector("span"); if (t) t.textContent = label;
   }
   d.querySelectorAll("[data-mail]").forEach(function (a) {
