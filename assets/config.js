@@ -9,7 +9,7 @@ window.CAMNEXO = {
   downloads: {
     windows: { status: "early", url: "downloads/CamNexo-Setup-0.3.1.exe", sha256: "0e3b6bcb1e0d08682aef207d9c2fc1546fa5bf9b99f86121dc6c5a95d71712c0", size: "11.2 MB", note: "Version 0.3.1 for Windows 11." },
     macos:   { status: "soon",  url: "", note: "In development." },
-    linux:   { status: "soon",  url: "", note: "In development: .deb, .rpm and AppImage." },
+    linux:   { status: "early", url: "https://github.com/yantrixlab/CamNexo/releases/download/linux-v0.1.0/camnexo_0.1.0_amd64.deb", size: "9 MB", note: "Experimental. Debian and Ubuntu 22.04 or newer, 64-bit. Checksums are on the release page." },
     android: { status: "live", store: true, url: "https://play.google.com/store/apps/details?id=com.camnexo.webcam", note: "Android 7 or newer. Free on Google Play." },
   },
 };

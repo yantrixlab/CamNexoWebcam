@@ -42,6 +42,7 @@
     <aside class="toc" aria-label="On this page">
         <a href="#setup">Quick start</a>
         <a href="#warning">Installer warning</a>
+        <a href="#linux">Linux (experimental)</a>
         <a href="#several">Several phones</a>
         <a href="#effects">Background and looks</a>
         <a href="#nopc">My computer does not appear on the phone</a>
@@ -79,6 +80,21 @@
 <li>Under <strong>Look</strong> pick a style, and use <strong>Adjust</strong> for brightness, contrast, colour and warmth. <strong>Apply to all cameras</strong> copies the settings.</li>
 </ol>
 <p>Effects are applied to the picture every app receives, so Zoom, Meet, Teams and OBS show them too. For the cleanest edge use even light, sit in front of a plainer wall, and keep one person in the picture. If the effect cannot run, the panel says so and the colour looks still work; use <strong>Download the effects files again</strong> in the panel to repair it.</p>
+
+<h2 id="linux">Linux (experimental)</h2>
+<p>The Linux desktop app is an <strong>experimental early release</strong> for Debian and Ubuntu (64-bit, Ubuntu 22.04 or newer, and systems based on them). It is built and checked by automated tests, but it has not been tried by hand on many computers yet, so please <a data-mail href="#">tell us</a> what you find.</p>
+<ol>
+<li>Download the <code>.deb</code> file from the Download section and install it: <code>sudo apt install ./camnexo_*_amd64.deb</code>. This also installs the virtual camera module (<code>v4l2loopback-dkms</code>) when your system can.</li>
+<li><strong>Secure Boot:</strong> if it is on, the system asks you to enrol a key (a short password, then a reboot with a blue screen) so the virtual camera module can load. This is normal on Ubuntu and Debian and is done once.</li>
+<li>Open <strong>CamNexo</strong> from your applications menu. If the app says the virtual camera module is not loaded, copy the command it shows into a terminal.</li>
+<li>Open the CamNexo phone app, tap your computer, and choose <strong>CamNexo</strong> as the camera in your video app.</li>
+</ol>
+<ul>
+<li>If the app says it cannot open the camera and mentions permission, add your user to the video group (<code>sudo usermod -aG video $USER</code>) and log in again.</li>
+<li>If your computer does not appear on the phone, make sure the Avahi service is running (<code>sudo systemctl enable --now avahi-daemon</code>) and that port 7878 is not blocked by a firewall.</li>
+<li>Background blur and replacement are a one-time download inside the Effects panel (about 31 MB).</li>
+<li>Other distributions (Fedora, Arch) and an AppImage are planned.</li>
+</ul>
 
 <h2 id="warning">Chrome or Windows warns about the installer</h2>
 <p>You may see <strong>“Suspicious download blocked”</strong> in Chrome, or <strong>“Windows protected your PC”</strong> from Microsoft Defender SmartScreen. This happens because the early-access installer is not code-signed yet and few people have downloaded it, so neither Chrome nor Windows recognizes it. It does not mean the file has been found to be harmful. We are working on getting the installer signed, and the warnings fade as it becomes better known.</p>
